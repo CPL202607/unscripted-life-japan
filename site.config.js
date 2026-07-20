@@ -8,11 +8,11 @@ export const site = {
   supabaseAnonKey: 'sb_publishable_ieZMTe9vcLo2r273tLVSJw_sLwoAsad',
   hero: {
     image: '/images/hero.jpg',
-    alt: '一條在多雲天空下延伸到遠方的空曠公路',
-    creditText: 'Empty Road',
-    creditAuthor: 'Nicholas_T',
-    creditSourceUrl: 'https://www.flickr.com/photos/nicholas_t/361161401/',
-    licenseName: 'CC BY 2.0',
-    licenseUrl: 'https://creativecommons.org/licenses/by/2.0/',
+    alt: '從仙巖園眺望櫻島火山的景色',
+    creditText: 'Sakurajima from Sengan-en',
+    creditAuthor: 'STA3816',
+    creditSourceUrl: 'https://commons.wikimedia.org/wiki/File:Sakurajima_from_Sengan-en.jpg',
+    licenseName: 'CC BY 3.0',
+    licenseUrl: 'https://creativecommons.org/licenses/by/3.0/',
   },
 };
