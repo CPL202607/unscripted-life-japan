@@ -8,11 +8,11 @@ export const site = {
   supabaseAnonKey: 'sb_publishable_ieZMTe9vcLo2r273tLVSJw_sLwoAsad',
   hero: {
     image: '/images/hero.jpg',
-    alt: '晴天下的上高地河童橋，背景是穗高連峰',
-    creditText: '150920 Kappa-bashi Kamikochi Japan02n',
-    creditAuthor: '663highland',
-    creditSourceUrl: 'https://commons.wikimedia.org/wiki/File:150920_Kappa-bashi_Kamikochi_Japan02n.jpg',
-    licenseName: 'CC BY 2.5',
-    licenseUrl: 'https://creativecommons.org/licenses/by/2.5/',
+    alt: '晴朗天空下的富士山，無人物',
+    creditText: 'Blue Mountain',
+    creditAuthor: 'reggiepen',
+    creditSourceUrl: 'https://www.flickr.com/photos/reggiepen/23538698586/',
+    licenseName: 'CC BY 2.0',
+    licenseUrl: 'https://creativecommons.org/licenses/by/2.0/',
   },
 };
