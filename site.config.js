@@ -8,11 +8,11 @@ export const site = {
   supabaseAnonKey: 'sb_publishable_ieZMTe9vcLo2r273tLVSJw_sLwoAsad',
   hero: {
     image: '/images/hero.jpg',
-    alt: '晴朗天空下的富士山，無人物',
-    creditText: 'Blue Mountain',
-    creditAuthor: 'reggiepen',
-    creditSourceUrl: 'https://www.flickr.com/photos/reggiepen/23538698586/',
-    licenseName: 'CC BY 2.0',
-    licenseUrl: 'https://creativecommons.org/licenses/by/2.0/',
+    alt: '晴朗夏日下伊豆大室山的翠綠草坡與火山口',
+    creditText: 'Crater of Mount Omuro (Izu Peninsula)-7',
+    creditAuthor: 'Immanuelle',
+    creditSourceUrl: 'https://commons.wikimedia.org/wiki/File:Crater_of_Mount_Omuro_(Izu_Peninsula)-7.jpg',
+    licenseName: 'CC BY 4.0',
+    licenseUrl: 'https://creativecommons.org/licenses/by/4.0/',
   },
 };
