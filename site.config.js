@@ -8,12 +8,12 @@ export const site = {
   supabaseAnonKey: 'sb_publishable_ieZMTe9vcLo2r273tLVSJw_sLwoAsad',
   hero: {
     image: '/images/hero.jpg',
-    alt: '晴朗夏日下伊豆大室山的翠綠草坡與火山口',
-    creditText: 'Crater of Mount Omuro (Izu Peninsula)-7',
-    creditAuthor: 'Immanuelle',
-    creditSourceUrl: 'https://commons.wikimedia.org/wiki/File:Crater_of_Mount_Omuro_(Izu_Peninsula)-7.jpg',
-    licenseName: 'CC BY 4.0',
-    licenseUrl: 'https://creativecommons.org/licenses/by/4.0/',
+    alt: '從嚴島神社西迴廊望向海上大鳥居',
+    creditText: 'View of grand torii from west corridor of Itsukushima Shrine',
+    creditAuthor: 'そらみみ',
+    creditSourceUrl: 'https://commons.wikimedia.org/wiki/File:View_of_grand_torii_from_west_corridor_of_Itsukushima_Shrine.jpg',
+    licenseName: 'CC BY-SA 4.0',
+    licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
   },
   // Special posts are full-page interactive experiences (not markdown articles).
   // Their sourceDir is copied verbatim into dist/posts/<slug>/, then a small
