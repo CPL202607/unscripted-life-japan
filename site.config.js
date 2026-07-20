@@ -26,6 +26,7 @@ export const site = {
       date: '2026-07-20',
       excerpt: '明治十年西南戰爭互動 3D 沙盤：從鹿兒島火藥庫事件到城山最後決戰，十二幕重現日本最後的內戰。',
       sourceDir: 'special-posts/seinan-war-3d',
+      thumbnail: '/posts/seinan-war-3d/og-image.png',
     },
   ],
 };

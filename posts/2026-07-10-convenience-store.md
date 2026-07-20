@@ -4,6 +4,7 @@ slug: late-night-conbini
 date: 2026-07-10
 author: Peilun
 excerpt: 不管去了幾次日本，深夜的便利商店永遠是那個讓人安心下來的地方。
+thumbnail: /images/thumbs/late-night-conbini.jpg
 ---
 
 如果要我選一個最能代表「在日本生活」的畫面，我大概會選深夜的便利商店。

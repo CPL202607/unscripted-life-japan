@@ -74,6 +74,7 @@ function loadPosts() {
       title: data.title || slug,
       author: data.author || site.defaultAuthor,
       excerpt: data.excerpt || '',
+      thumbnail: data.thumbnail || '',
       publishedDate,
       updatedDate,
       html: marked.parse(content),
@@ -92,6 +93,7 @@ function loadSpecialPosts() {
       title: sp.title,
       author: sp.author || site.defaultAuthor,
       excerpt: sp.excerpt || '',
+      thumbnail: sp.thumbnail || '',
       publishedDate,
       updatedDate,
       external: true,
@@ -190,6 +192,12 @@ function renderIndexPage(posts) {
     .map(
       (post) => `
     <a class="card" href="/posts/${post.slug}/" data-slug="${escapeHtml(post.slug)}">
+      ${
+        post.thumbnail
+          ? `<img class="card-thumb" src="${escapeHtml(post.thumbnail)}" alt="" loading="lazy">`
+          : `<div class="card-thumb card-thumb-placeholder" aria-hidden="true">${escapeHtml((post.title || '').slice(0, 1))}</div>`
+      }
+      <div class="card-body">
       <h2 class="card-title">${escapeHtml(post.title)}</h2>
       <p class="card-excerpt">${escapeHtml(post.excerpt)}</p>
       <p class="card-meta">
@@ -197,6 +205,7 @@ function renderIndexPage(posts) {
         <time class="card-updated" datetime="${post.updatedDate}">最後更新 ${formatDate(post.updatedDate)}</time>
       </p>
       <p class="card-views">瀏覽次數：<span class="count">—</span></p>
+      </div>
     </a>`
     )
     .join('\n');
