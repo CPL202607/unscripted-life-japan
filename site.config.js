@@ -8,11 +8,11 @@ export const site = {
   supabaseAnonKey: 'sb_publishable_ieZMTe9vcLo2r273tLVSJw_sLwoAsad',
   hero: {
     image: '/images/hero.jpg',
-    alt: '從仙巖園眺望櫻島火山的景色',
-    creditText: 'Sakurajima from Sengan-en',
-    creditAuthor: 'STA3816',
-    creditSourceUrl: 'https://commons.wikimedia.org/wiki/File:Sakurajima_from_Sengan-en.jpg',
-    licenseName: 'CC BY 3.0',
-    licenseUrl: 'https://creativecommons.org/licenses/by/3.0/',
+    alt: '晴天下的上高地河童橋，背景是穗高連峰',
+    creditText: '150920 Kappa-bashi Kamikochi Japan02n',
+    creditAuthor: '663highland',
+    creditSourceUrl: 'https://commons.wikimedia.org/wiki/File:150920_Kappa-bashi_Kamikochi_Japan02n.jpg',
+    licenseName: 'CC BY 2.5',
+    licenseUrl: 'https://creativecommons.org/licenses/by/2.5/',
   },
 };
