@@ -1,7 +1,7 @@
 export const site = {
-  title: '人生沒有劇本，有時會在日本',
+  title: '人生沒有劇本 有時會在日本',
   shortTitle: '人生沒有劇本',
-  description: '記錄旅行與生活裡那些沒有事先寫好的片段。',
+  description: '記錄旅行與生活裡那些沒有事先寫好的片段',
   defaultAuthor: 'Peilun',
   url: '', // 填入 Cloudflare Pages 網址後可補上，用於 SEO 的 og:url（非必填）
   supabaseUrl: 'https://xfwgefzoocvizdufpnqm.supabase.co',
