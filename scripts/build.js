@@ -209,9 +209,6 @@ function renderIndexPage(posts) {
     .join('\n');
 
   const body = `
-<header class="site-header">
-  <a class="site-brand" href="/">${escapeHtml(site.shortTitle)}</a>
-</header>
 <section class="hero">
   <img class="hero-image" src="${site.hero.image}" alt="${escapeHtml(site.hero.alt)}">
   <div class="hero-text">
