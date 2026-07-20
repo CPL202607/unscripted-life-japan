@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="42%" r="75%">
+      <stop offset="0%" stop-color="#1c1f28"/>
+      <stop offset="100%" stop-color="#101218"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f4e0b0"/>
+      <stop offset="55%" stop-color="#e8cd92"/>
+      <stop offset="100%" stop-color="#c9a55e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="905" cy="185" r="125" fill="#e05548" opacity="0.85"/>
+  <path d="M-40,630 L260,470 L420,560 L560,480 L820,630 Z" fill="#d8b877" opacity="0.13"/>
+  <path d="M420,630 L760,430 L900,510 L1010,455 L1260,630 Z" fill="#d8b877" opacity="0.22"/>
+  <text x="600" y="128" text-anchor="middle" font-family="Songti TC, Noto Serif TC, serif" font-size="30" fill="#d8b877" letter-spacing="18">最 後 的 武 士 ・ 特 別 企 劃</text>
+  <text x="600" y="330" text-anchor="middle" font-family="Songti TC, Noto Serif TC, serif" font-weight="900" font-size="185" fill="url(#gold)" letter-spacing="22">西南戰爭</text>
+  <text x="600" y="448" text-anchor="middle" font-family="PingFang TC, Noto Sans TC, sans-serif" font-size="35" fill="#ece5d3" letter-spacing="4">明治十年（1877）・九州全島　政府軍 6 萬 對 薩軍 3 萬</text>
+  <text x="600" y="512" text-anchor="middle" font-family="PingFang TC, Noto Sans TC, sans-serif" font-size="27" fill="#b7a67f" letter-spacing="6">十二幕互動 3D 戰場沙盤</text>
+  <text x="600" y="588" text-anchor="middle" font-family="PingFang TC, Noto Sans TC, sans-serif" font-size="21" fill="#6d6a5e" letter-spacing="2">seinan-war-3d.pages.dev</text>
+</svg>

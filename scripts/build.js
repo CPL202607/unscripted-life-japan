@@ -81,6 +81,43 @@ function loadPosts() {
   });
 }
 
+function loadSpecialPosts() {
+  return (site.specialPosts || []).map((sp) => {
+    const sourcePath = path.join(ROOT, sp.sourceDir);
+    const publishedDate = new Date(sp.date).toISOString();
+    const updatedDate = resolveUpdatedDate(sourcePath, sp.updated, sp.date);
+
+    return {
+      slug: sp.slug,
+      title: sp.title,
+      author: sp.author || site.defaultAuthor,
+      excerpt: sp.excerpt || '',
+      publishedDate,
+      updatedDate,
+      external: true,
+      sourceDir: sp.sourceDir,
+    };
+  });
+}
+
+function injectBlogBarIntoExternalPost(indexHtmlPath, post) {
+  const html = fs.readFileSync(indexHtmlPath, 'utf-8');
+
+  // Kept deliberately small: the host page (seinan-war-3d) already has its own
+  // fixed UI in every corner (#titleCard top-left, #legend top-right, #playbar
+  // bottom), so this only adds a minimal back-button. The view count still
+  // increments silently — it's surfaced on the homepage card, not duplicated here.
+  const bar = `
+<a href="/" title="回到「${escapeHtml(site.shortTitle)}」" class="view-counter" data-slug="${escapeHtml(post.slug)}" style="position:fixed;top:10px;left:10px;z-index:9999;display:flex;align-items:center;justify-content:center;width:30px;height:30px;background:rgba(12,14,19,.78);border:1px solid rgba(216,184,119,.4);border-radius:50%;color:#d8b877;text-decoration:none;font-size:15px;line-height:1;backdrop-filter:blur(4px);">&larr;<span class="count" style="display:none;"></span></a>
+<script type="module">
+  import { incrementAndShowCount } from '/js/counter.js';
+  incrementAndShowCount(${JSON.stringify(post.slug)});
+</script>
+`;
+
+  fs.writeFileSync(indexHtmlPath, html.replace('</body>', `${bar}</body>`));
+}
+
 function layout({ title, description, bodyHtml, extraHead = '' }) {
   return `<!doctype html>
 <html lang="zh-Hant">
@@ -198,6 +235,7 @@ function build() {
   if (fs.existsSync(PUBLIC_DIR)) copyDir(PUBLIC_DIR, DIST_DIR);
 
   const posts = loadPosts();
+  const specialPosts = loadSpecialPosts();
 
   for (const post of posts) {
     const postDir = path.join(DIST_DIR, 'posts', post.slug);
@@ -205,9 +243,16 @@ function build() {
     fs.writeFileSync(path.join(postDir, 'index.html'), renderPostPage(post));
   }
 
-  fs.writeFileSync(path.join(DIST_DIR, 'index.html'), renderIndexPage(posts));
+  for (const post of specialPosts) {
+    const postDir = path.join(DIST_DIR, 'posts', post.slug);
+    copyDir(path.join(ROOT, post.sourceDir), postDir);
+    injectBlogBarIntoExternalPost(path.join(postDir, 'index.html'), post);
+  }
 
-  console.log(`Built ${posts.length} post(s) into dist/`);
+  const allPosts = [...posts, ...specialPosts];
+  fs.writeFileSync(path.join(DIST_DIR, 'index.html'), renderIndexPage(allPosts));
+
+  console.log(`Built ${posts.length} post(s) and ${specialPosts.length} special post(s) into dist/`);
 }
 
 build();
