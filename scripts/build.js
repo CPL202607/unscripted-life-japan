@@ -157,7 +157,7 @@ function siteFooter() {
 function renderPostPage(post) {
   const body = `
 <header class="site-header">
-  <a class="site-brand" href="/">${escapeHtml(site.shortTitle)}</a>
+  <a class="site-brand" href="/">首頁</a>
 </header>
 <main class="container post">
   <article>
