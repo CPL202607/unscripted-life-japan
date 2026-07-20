@@ -147,18 +147,6 @@ a:hover {
   font-size: 0.85rem;
   color: var(--color-muted);
 }
-.card-views {
-  margin: 0;
-  font-size: 0.85rem;
-  color: var(--color-muted);
-}
-
-.site-view-counter {
-  padding: 20px 0 0;
-  color: var(--color-muted);
-  font-size: 0.9rem;
-}
-
 /* Post */
 .post-title {
   font-size: clamp(1.6rem, 5vw, 2.1rem);
@@ -197,14 +185,6 @@ a:hover {
   display: block;
   overflow-x: auto;
 }
-.view-counter {
-  margin-top: 32px;
-  padding-top: 16px;
-  border-top: 1px solid var(--color-border);
-  color: var(--color-muted);
-  font-size: 0.9rem;
-}
-
 /* Footer */
 .site-footer {
   border-top: 1px solid var(--color-border);

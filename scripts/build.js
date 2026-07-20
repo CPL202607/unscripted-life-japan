@@ -173,7 +173,6 @@ function renderPostPage(post) {
     <div class="post-content">
       ${post.html}
     </div>
-    <p class="view-counter" data-slug="${escapeHtml(post.slug)}">瀏覽次數：<span class="count">—</span></p>
   </article>
 </main>
 ${siteFooter()}
@@ -204,7 +203,6 @@ function renderIndexPage(posts) {
         <span class="card-author">${escapeHtml(post.author)}</span>
         <time class="card-updated" datetime="${post.updatedDate}">最後更新 ${formatDate(post.updatedDate)}</time>
       </p>
-      <p class="card-views">瀏覽次數：<span class="count">—</span></p>
       </div>
     </a>`
     )
@@ -222,16 +220,14 @@ function renderIndexPage(posts) {
   </div>
 </section>
 <main class="container">
-  <p class="site-view-counter">網站總瀏覽次數：<span class="count">—</span></p>
   <div class="card-grid">
     ${cards}
   </div>
 </main>
 ${siteFooter()}
 <script type="module">
-  import { incrementAndShowSiteCount, hydrateCardCounts } from '/js/counter.js';
+  import { incrementAndShowSiteCount } from '/js/counter.js';
   incrementAndShowSiteCount();
-  hydrateCardCounts();
 </script>
 `;
   return layout({ title: site.title, description: site.description, bodyHtml: body });
