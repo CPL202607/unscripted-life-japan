@@ -3,7 +3,7 @@ export const site = {
   shortTitle: '人生沒有劇本',
   description: '記錄旅行與生活裡那些沒有事先寫好的片段',
   defaultAuthor: 'Peilun',
-  url: '', // 填入 Cloudflare Pages 網址後可補上，用於 SEO 的 og:url（非必填）
+  url: 'https://unscripted-life-japan.unfoldingtravels.workers.dev', // 網站正式網址，用於 og:image 等社群分享標籤的絕對路徑
   supabaseUrl: 'https://xfwgefzoocvizdufpnqm.supabase.co',
   supabaseAnonKey: 'sb_publishable_ieZMTe9vcLo2r273tLVSJw_sLwoAsad',
   hero: {

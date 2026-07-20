@@ -121,6 +121,7 @@ function injectBlogBarIntoExternalPost(indexHtmlPath, post) {
 }
 
 function layout({ title, description, bodyHtml, extraHead = '' }) {
+  const ogImage = `${site.url}/images/og-image.jpg`;
   return `<!doctype html>
 <html lang="zh-Hant">
 <head>
@@ -128,6 +129,14 @@ function layout({ title, description, bodyHtml, extraHead = '' }) {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${escapeHtml(title)}</title>
 <meta name="description" content="${escapeHtml(description)}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="${escapeHtml(title)}">
+<meta property="og:description" content="${escapeHtml(description)}">
+<meta property="og:image" content="${ogImage}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="${ogImage}">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/css/style.css">
 ${extraHead}
